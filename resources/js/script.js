@@ -1,82 +1,132 @@
-$(document).ready(function(){
-    
-    $('.js--section-features').waypoint(function(direction){
-        if(direction=="down"){
-            $('nav').addClass('sticky')
-        }else{
-            $('nav').removeClass('sticky')
-        }
-    },{
-        offset:'60px'
-    })
-    $('.js--scroll-to-plans').click(function(){
-        $('html,body').animate({scrollTop: $('.js--section-plans').offset().top},1000)
-    })
-     $('.js--scroll-to-features').click(function(){
-        $('html,body').animate({scrollTop: $('.js--section-features').offset().top},1000)
-    })
-    // Select all links with hashes
-$('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 1000, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
-      }
+if (window.screen.width <= 1130) {
+    function removeall() {
+        $(".cir_border").css("border", "none");
     }
-  });
-    $('.js--wp-1').waypoint(function(direction){
-        $('.js--wp-1').addClass('animated animate__fadeIn')
-    },{
-        offset: '50%'
-    })
-    $('.js--wp-2').waypoint(function(direction){
-        $('.js--wp-2').addClass('animated animate__fadeInUp')
-    },{
-        offset: '50%'
-    })
-    $('.js--wp-3').waypoint(function(direction){
-        $('.js--wp-3').addClass('animated animate__fadeIn')
-    },{
-        offset: '50%'
-    })
-   $('.js--wp-4').waypoint(function(direction){
-        $('.js--wp-4').addClass('animated animate__pulse')
-    },{
-        offset: '50%'
-    })    
-})
+    $("#sec").on("click", function () {
+        removeall();
+        $("#sec").css("border", "2px solid whitesmoke");
+        $("#sec").css("border-radius", "20px");
+    });
+    $("#pri").on("click", function () {
+        removeall();
+        $("#pri").css("border", "2px solid whitesmoke");
+        $("#pri").css("border-radius", "20px");
+    });
+    $("#tri").on("click", function () {
+        removeall();
+        $("#tri").css("border", "2px solid whitesmoke");
+        $("#tri").css("border-radius", "20px");
+    });
+    $("#quad").on("click", function () {
+        removeall();
+        $("#quad").css("border", "2px solid whitesmoke");
+        $("#quad").css("border-radius", "20px");
+    });
+    $("#quint").on("click", function () {
+        removeall();
+        $("#quint").css("border", "2px solid whitesmoke");
+        $("#quint").css("border-radius", "20px");
+    });
+    $("#hex").on("click", function () {
+        removeall();
+        $("#hex").css("border", "2px solid whitesmoke");
+        $("#hex").css("border-radius", "20px");
+    });
+    $("#hept").on("click", function () {
+        removeall();
+        $("#hept").css("border", "2px solid whitesmoke");
+        $("#hept").css("border-radius", "20px");
+    });
+}
 
+$("#about").on("mouseover", function () {
+    introAboutLogoTransition();
+});
 
+$("input").on("change", function () {
+    $("body").toggleClass("blue");
+});
 
-//var waypoints = $('#handler-first').waypoint(function(direction) {
-//  notify(this.element.id + ' hit 25% from top of window') 
-//}, {
-//  offset: '25%'
-//})
+// Light/Dark toggle
+const checkbox = document.getElementById("checkbox");
+
+function introAboutLogoTransition() {
+    $("#about-quad").css("top", "70%");
+    $("#about-quad").css("opacity", "1");
+}
+
+function checkDarkMode() {
+    if (
+        localStorage.getItem("tourism_website_darkmode") !== null &&
+        localStorage.getItem("tourism_website_darkmode") === "true"
+    ) {
+        document.body.classList.add("dark");
+        checkbox.checked = true;
+    }
+}
+checkDarkMode();
+
+checkbox.addEventListener("change", () => {
+    document.body.classList.toggle("dark");
+    document.body.classList.contains("dark")
+        ? localStorage.setItem("tourism_website_darkmode", true)
+        : localStorage.setItem("tourism_website_darkmode", false);
+});
+
+// scroll button
+
+let mybutton = document.getElementById("upbtn");
+
+window.onscroll = function () {
+    scrollFunction();
+};
+
+function scrollFunction() {
+    if (
+        document.body.scrollTop > 20 ||
+        document.documentElement.scrollTop > 20
+    ) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}
+function topFunction() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+}
+
+// Update Navbar While Scrolling
+function updateNav() {
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-links li a");
+
+    sections.forEach((section, index) => {
+        const rect = section.getBoundingClientRect();
+
+        if (window.screen.width <= 425) {
+            if (rect.top <= 1300) {
+                navLinks.forEach((navLink) => {
+                    navLink.classList.remove("active");
+                });
+                navLinks[index].classList.add("active");
+            }
+        } else if (425 <= window.screen.width <= 768) {
+            if (rect.top <= 1250) {
+                navLinks.forEach((navLink) => {
+                    navLink.classList.remove("active");
+                });
+                navLinks[index].classList.add("active");
+            }
+        } else {
+            if (rect.top <= 1000) {
+                navLinks.forEach((navLink) => {
+                    navLink.classList.remove("active");
+                });
+                navLinks[index].classList.add("active");
+            }
+        }
+    });
+}
+
+window.addEventListener("scroll", updateNav);
