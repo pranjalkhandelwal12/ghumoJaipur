@@ -1,409 +1,364 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>ghumoJaipur</title>
-        <link rel="stylesheet" type="text/css" href="vendor/css/normalize.css">
-        <link rel="stylesheet" type="text/css" href="vendor/css/Grid.css">
-        <link rel="stylesheet" type="text/css" href="vendor/css/ionicons.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        <link rel="stylesheet" type="text/css" href="resources/css/style.css">
-        <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;1,300&display=swap" rel="stylesheet">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ghumo Jaipur</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/responsive.css" />
+        <link
+            rel="apple-touch-icon"
+            sizes="180x180"
+            href="img/apple-touch-icon.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="img/favicon-32x32.png"
+        />
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="16x16"
+            href="img/favicon-16x16.png"
+        />
+        <link rel="manifest" href="/site.webmanifest" />
     </head>
-    <body>
-        <header id="home">
-            <nav>
-                <div class="row">
-               <a href="#home"><img src="resources/images/logo-white.png" alt="logo" class="logo-white"></a> 
-               <a href="#home"><img src="resources/images/logo.png" alt="logo" class="logo-black"></a> 
-                <ul class="main-nav">
-                    <li><a href="#features">About jaipur</a></li>
-                    <li><a href="#places">Famous Places</a></li>
-                    <li><a href="#cities">Areas Covered</a></li>
-                    <li><a href="#plans">Buy Now </a></li>
-                    </ul>
-                 </div>
-            </nav>
-            <div class="header-text">
-                <h1>Experience the grandeur of Jaipur <br>the city of palaces and forts."</h1>
-                <a class="btn btn-full js--scroll-to-plans" href="#">Travel with us</a>
-                <a class="btn btn-border js--scroll-to-features" href="#">About us</a>
-            </div>
-        
-        </header>
-        <!-- <section class="section-features js--section-features" id="features">
-            <div class="row">
-                <h2>Get food fast — not fast food.</h2>
-                <p class="feature-text">Hello, we’re Omnifood, your new premium food delivery service. We know you’re always busy. No time for cooking. So let us take care of that, we’re really good at it, we promise!
-                </p>
-            </div>
-            <div class="row js--wp-1">
-                <div class="col span-1-of-4 box">
-                    <i class="ion-ios-infinite icon-big"></i>
-                    <h3>Up to 365 days/year</h3>
-                    <p>Never cook again! We really mean that. Our subscription plans include up to 365 days/year coverage. You can also choose to order more flexibly if that's your style.</p>
-                </div>
-                 <div class="col span-1-of-4 box">
-                     <i class="ion-android-alarm-clock icon-big"></i>
-                    <h3>Ready in 20 minutes</h3>
-                    <p>You're only twenty minutes away from your delicious and super healthy meals delivered right to your home. We work with the best chefs in each town to ensure that you're 100% happy.</p>
-                </div>
-                 <div class="col span-1-of-4 box">
-                     <i class="ion-ios-nutrition icon-big"></i>
-                    <h3>100% organic</h3>
-                    <p>All our vegetables are fresh, organic and local. Animals are raised without added hormones or antibiotics. Good for your health, the environment, and it also tastes better!</p>
-                </div>
-                 <div class="col span-1-of-4 box">
-                     <i class="ion-ios-cart icon-big"></i>
-                    <h3>Order anything</h3>
-                    <p>We don't limit your creativity, which means you can order whatever you feel like. You can also choose from our menu containing over 100 delicious meals. It's up to you!</p>
-                </div>
-            </div>
-        </section> -->
-        <section class="section-abtjaipur js--section-features" id="features">
-            <div class="row">
-                <h2>Jaipur, where history and culture come alive.</h2>
-            </div>
-            <div class="col span-1-of-2 abt-jaipur">
-                <p>Jaipur is the capital of India’s Rajasthan state. 
-                    It evokes the royal family that once ruled the region and that, in 1727,
-                    founded what is now called the Old City, or “Pink City” for its trademark building color.
-                    At the center of its stately street grid (notable in India) stands the opulent,
-                    colonnaded City Palace complex. With gardens,courtyards and museums,
-                    part of it is still a royal residence.<br>The city of Jaipur was founded by the King of Amber,
-                    Maharaja Sawai Jai Singh II on 18 November 1727, who ruled from 1699 to 1743.</br>  
-                </p>
-            </div>
-            <div class="row">
-                <div class="col span-1-of-2 abt-jaipur">
-                    <img src="resources/css/img/scnd.jpg" alt="abtphoto" class="abt-img">
-                </div>
-            </div>
-        </section>
+    <body
+        onload='if (window.location.href.substr(window.location.href.length - 6) == "#about") { introAboutLogoTransition(); }'
+    >
+        <!--navbar-->
+        <nav class="navbar glass" style="height: 70px">
+            <span
+                ><a href="#home" style="display: flex; align-items: center"
+                    ><img
+                        class="img2"
+                        src="./img/mountain.png"
+                        width="40"
+                        style="margin: -25px -10px -25px -20px"
+                    />
+                    <h1 class="logo">&nbsp;GhumoJaipur</h1></a
+                ></span
+            >
+            <ul class="nav-links">
+                <li>
+                    <a href="#home" id="pri" class="active cir_border">Home</a>
+                </li>
+                <li><a href="#events" id="sec" class="cir_border">Events</a></li>
+                <li>
+                    <a href="#explore" id="tri" class="cir_border">Explore</a>
+                </li>
+                <li>
+                    <a href="#tours" id="quad" class="cir_border">Tours</a>
+                </li>
+                <li><a href="#about" id="quint" class="cir_border">About</a></li>
+                <!-- <li>
+                    <a href="#contribution" id="hex" class="cir_border"
+                        >Contributions</a
+                    >
+                </li> -->
+                <li>
+                    <a href="#contact" id="hept" class="cir_border">Contact</a>
+                </li>
+                <li>
+                    <div>
+                        <input
+                            type="checkbox"
+                            class="checkbox dark"
+                            id="checkbox"
+                        />
+                        <label for="checkbox" class="label">
+                            <i class="fa fa-moon-o"></i>
+                            <i class="fa fa-sun-o"></i>
+                            <div class="ball"></div>
+                        </label>
+                    </div>
+                </li>
+            </ul>
+            <img src="./img/menu-btn.png" alt="" class="menu-btn" />
+        </nav>
+        <!--navbar-->
 
-        <section class="section-meals js--section-places" id="places">
-            <ul class="meals-showcase clearfix">
-                <li>
-                    <figure class="meals-photo">
-                        <img src="resources/images/alberthall.jpg" alt="albert hall">
-                    </figure>
-                </li>
-                 <li>
-                    <figure class="meals-photo">
-                        <img src="resources/images/amerfortjaipur.jpg" alt="amer fort">
-                    </figure>
-                </li>
-                 <li>
-                    <figure class="meals-photo">
-                        <img src="resources/images/birlamandir.jpg" alt="birla mandir">
-                    </figure>
-                </li>
-                 <li>
-                    <figure class="meals-photo">
-                        <img src="resources/images/citypalace.jpg" alt="city palaces">
-                    </figure>
-                </li>
-            </ul>
-             <ul class="meals-showcase clearfix">
-                <li>
-                    <figure class="meals-photo">
-                        <img src="resources/images/jalmahal.jpg" alt="jalmahal">
-                    </figure>
-                </li>
-                 <li>
-                    <figure class="meals-photo">
-                        <img src="resources/images/patrikagate.jpeg" alt="patrika gate">
-                    </figure >
-                </li>
-                 <li>
-                    <figure class="meals-photo">
-                        <img src="resources/images/nahargarhfort.jpg" alt="nahargarh fort">
-                    </figure>
-                </li>
-                 <li>
-                    <figure class="meals-photo">
-                        <img src="resources/images/hawamahal.jpg" alt="hawamahal">
-                    </figure>
-                </li>
-            </ul>
-        </section>
-        <section class="section-works" id="works">
-            <div class="row">
-                <h2>How it works - Simple as 1, 2, 3</h2>
+        <header id="home">
+            <div class="header-content">
+                <h2 id="quote">Experience the grandeur of Jaipur</h2>
+                <div class="line"></div>
+                <h1>the city of palaces and forts.</h1>
+                <a
+                    href="#about"
+                    class="ctn"
+                    onclick='removeall(); $("#quad").css("border", "2px solid whitesmoke"); $("#quad").css("border-radius", "20px");'
+                    >Learn more</a
+                >
             </div>
-            <div class="row">
-                <div class="col span-1-of-2 step-box">
-                    <img src="resources/images/app-iPhone.png" alt="iPhone Image" class="phone-img js--wp-2">
+        </header>
+
+        <!--Events-->
+        <section class="events" id="events">
+            <div class="container">
+                <div class="title">
+                    <h1 class="dark">Upcoming Events</h1>
+                    <div class="line"></div>
                 </div>
-                <div class="col span-1-of-2 step-box">
-                    <div class="work-steps">
-                        <div>1</div>
-                        <p>Choose the subscription plan that best fits your needs and sign up today.</p>
-                    </div>
-                    <div class="work-steps">
-                        <div>2</div>
-                        <p>Plan Your Trip according to your Comfort and update on your plan entities</p>
-                    </div>
-                    <div class="work-steps">
-                        <div>3</div>
-                        <p>Enjoy your trip with us!!</p>
-                    </div>
-                    <a class="app-img" href="#"><img src="resources/images/app-store-img.jpg" alt="App Store"> </a>
-                    <a class="app-img" href="#"><img src="resources/images/download-app-android.png" alt="Play Store"> </a>
+                <div class="row">
+                    <article class="card col">
+                        <img class="card-img" src="./img/elephantpolo1.jpg" />
+                        <h4 class="dark">Elephant Polo Tournament</h4>
+                        <p class="font-color">
+                            Experience the thrill of Elephant Polo,
+                             a unique and exciting sport played in Jaipur.
+ 
+                        </p>
+                        <a href="#" class="ctn">All Details</a>
+                    </article>
+                    <article class="card col">
+                        <img src="./img/jlf1.jpg" />
+                        <h4 class="dark">Jaipur Literature Festival</h4>
+                        <p class="font-color">
+                            Join the world's largest literary festival, 
+                            featuring renowned authors and thinkers from around the globe.
+                        </p>
+                        <a href="#" class="ctn">All Details</a>
+                    </article>
+                    <article class="card col">
+                        <img src="./img/gangaurfestival.jpg" />
+                        <h4 class="dark">Gangaur Festival</h4>
+                        <p class="font-color">
+                            Celebrate the spring festival of Gangaur, 
+                            dedicated to the goddess of love, marriage, and fertility.
+                </p>
+                        <a href="#" class="ctn">All Details</a>
+                    </article>
                 </div>
             </div>
         </section>
-        <section class="section-cities" id="cities">
-            <div class="row">
-                <h2>We're currently in these cities</h2>
+        <!--Events-->
+
+        <!--Explore-->
+        <section class="explore" id="explore">
+            <div class="explore-content">
+                <h1>EXPLORE THE JAIPUR</h1>
+                <div class="line"></div>
+                <p>
+                    Jaipur, the Pink City, is a vibrant city filled with history and culture. <br>
+                    Explore its majestic forts, shop at bustling markets, and experience the rich heritage of Rajasthan. <br>
+                    From the stunning Amber Fort to the intricate jewelry of Johri Bazaar, Jaipur offers a captivating blend of old and new.
+                </p>
+                <a href="#" class="ctn">Explore more</a>
             </div>
-            <div class="row js--wp-3">
-                <div class="col span-1-of-4 box">
-                    <img src="resources/images/800px-Udaipur's_Landscape.jpg" alt="Lisbon">
-                    <h3>Udaipur</h3>
-                    <div class="city-features">
-                      <i class="ion-person icon-small"></i>
-                      1600+ happy travlers  
-                    </div>
-                    <div class="city-features">
-                      <i class="ion-ios-star icon-small"></i>
-                      4.8+ Ratings 
-                    </div>
-                    <div class="city-features">
-                      <i class="ion-social-twitter icon-small"></i>
-                      <a href="#">@ghumoUdiapur_ud</a> 
+        </section>
+        <!--Explore-->
+
+        <!--tours-->
+        <section class="tours" id="tours">
+            <div class="container row">
+                <div class="col content-col">
+                    <h1 class="font-color">UPCOMING TOURS & DESTINATION</h1>
+                    <div class="line"></div>
+                    <p>
+                        Wed 28 sept 2023 : Port of Spain City Tour and Birdseye
+                        Fort View. <br />
+                        Sat 1 oct 2023 : Tour the Gasparee Caves.<br />
+                        Tues 4 oct 2023 : Trinidad North Coast Experience.
+                        <br />
+                        and many more ......
+                    </p>
+                    <a href="#" class="ctn">Learn more</a>
+                </div>
+                <div class="image-col">
+                    <div class="image-gallery">
+                        <img src="./img/hawamahal.jpg" alt="" />
+                        <img src="./img/alberthall.jpg" alt="" />
+                        <img src="./img/nahargarhfort.jpg" alt="" />
+                        <img src="./img/jalmahal.jpg" alt="" />
                     </div>
                 </div>
-                
-                <div class="col span-1-of-4 box">
-                    <img src="resources/images/Fort_Jaisalmer_at_sunset.jpg" alt="San Francisco">
-                    <h3>Jaisalmer</h3>
-                    <div class="city-features">
-                      <i class="ion-person icon-small"></i>
-                      3700+ happy travlers  
+            </div>
+            <br /><br /><br /><br />
+        </section>
+        <!--tours-->
+
+        <!-- About -->
+        <section id="about">
+            <div class="title">
+                <h1 class="font-color">About Us</h1>
+                <div class="line"></div>
+            </div>
+            <br />
+            <div id="about_us">
+                <div class="boxx">
+                    <div class="containerx">
+                        <input type="radio" name="slider" id="item-1" checked />
+                        <input type="radio" name="slider" id="item-2" />
+                        <input type="radio" name="slider" id="item-3" />
+                        <div class="cards">
+                            <label class="cardt" for="item-1" id="col-img-1">
+                                <img src="./img/patrikagate.jpeg" />
+                            </label>
+                            <label class="cardt" for="item-2" id="col-img-2">
+                                <img src="./img/birlamandir.jpg" />
+                            </label>
+                            <label class="cardt" for="item-3" id="col-img-3">
+                                <img src="./img/amerfortjaipur.jpg" />
+                            </label>
+                            
+                            
+                        </div>
                     </div>
-                    <div class="city-features">
-                      <i class="ion-ios-star icon-small"></i>
-                      4.5+ Ratings
-                    </div>
-                    <div class="city-features">
-                      <i class="ion-social-twitter icon-small"></i>
-                      <a href="#">@ghumoJai_js</a> 
-                    </div>
-                    
-                </div>
-                <div class="col span-1-of-4 box">
-                    <img src="resources/images/photo-1545321945-7edd9bf1331a.jpg" alt="Berlin">
-                    <h3>Jodhpur</h3>
-                    <div class="city-features">
-                      <i class="ion-person icon-small"></i>
-                      2300+ happy travlers  
-                    </div>
-                    <div class="city-features">
-                      <i class="ion-ios-star icon-small"></i>
-                      4.3+ Ratings
-                    </div>
-                    <div class="city-features">
-                      <i class="ion-social-twitter icon-small"></i>
-                      <a href="#">@ghumoJodh_jodh</a> 
-                    </div>
-                    
-                </div>
-                <div class="col span-1-of-4 box">
-                    <img src="resources/images/exploring-ajmer.jpg" alt="London">
-                    <h3>Ajmer</h3>
-                    <div class="city-features">
-                      <i class="ion-person icon-small"></i>
-                      1200+ happy travlers
-                    </div>
-                    <div class="city-features">
-                      <i class="ion-ios-star icon-small"></i>
-                      5 Ratings
-                    </div>
-                    <div class="city-features">
-                      <i class="ion-social-twitter icon-small"></i>
-                      <a href="#">@ghumoajmer_aj</a> 
-                    </div>
+                    <span id="about-quad"
+                        ><a href="#home"
+                            ><center>
+                                <h1
+                                    style="
+                                        font-family: var(--ff-montserrat);
+                                        color: white;
+                                    "
+                                >
+                                    Find that
+                                </h1>
+                                <br />
+                                <img
+                                    class="img2"
+                                    src="./img/Ghumo_jaipur-removebg-preview (1).png"
+                                    width="200"
+                                    style="border-radius: 12%"
+                                />
+                                <br />
+                                <h1 class="logo" style="font-size: 50px">
+                                    Ghumo-Jaipur
+                                </h1>
+                            </center>
+                        </a>
+                    </span>
                 </div>
             </div>
         </section>
-        <section class="section-testimonials">
-            <div class="row">
-                <h2>Our customers cam't live without us</h2>
+        <!-- About -->
+
+        <!-- contact -->
+        <section id="contact">
+            <div class="title">
+                <h1 class="font-color">Contact Us</h1>
+                <div class="line"></div>
             </div>
-            <div class="row">
-                <div class="col span-1-of-3">
-                    <blockquote>
-                        I recently took a trip to Jaipur with this company, and it was an unforgettable experience. The team was incredibly accommodating and knowledgeable, ensuring we got the most out of our trip.
-                        <cite><img src="resources/images/customer-1.jpg">Rakesh Kumar</cite>
-                    </blockquote>
-                </div>
-                <div class="col span-1-of-3">
-                       <blockquote>
-                        I can't speak highly enough of the service provided by this traveling company in Jaipur. They took care of every detail, making our trip stress-free and enjoyable. The guides were not only informative but also passionate about the city's history. We were treated to some hidden gems and local experiences that made our trip truly special.
-                        <cite><img src="resources/images/customer-2.jpg">Joana Silva</cite>
-                    </blockquote>
-                </div>
-                <div class="col span-1-of-3">
-                     <blockquote>
-                        Our family had an incredible time exploring Jaipur with this company. From the moment we landed, they made us feel like royalty. The tour was well-organized, and they even tailored the activities to suit our family's interests and needs.
-                        <cite><img src="resources/images/customer-3.jpg">Milton Chapman</cite>
-                    </blockquote>
-                </div>
-            </div>    
-        </section>
-        <section class="section-plans js--section-plans" id="plans">
-            <div class="row">
-                <h2>Start your tour with us</h2>
-            </div>
-            <div class="row">
-                <div class="col span-1-of-3">
-                    <div class="plan-box js--wp-4">
-                     <div>
-                        <h3>premium</h3>
-                        <p class="plan-per-month">50k<span>for 5 Days</span></p>
-                        <p class="plan-per-meal">That's only 10k per day</p>
-                     </div>
-                     <div>
-                        <ul>
-                            <li><i class="ion-ios-checkmark-empty icon-small"></i>Full Accomodation</li>
-                            <li><i class="ion-ios-checkmark-empty icon-small"></i>Full day meal</li>
-                            <li><i class="ion-ios-checkmark-empty icon-small"></i>Luxurious</li>
-                            <li><i class="ion-ios-checkmark-empty icon-small"></i>Free Godies</li>
-                        </ul>
+            <div class="contact_us">
+                <form class="cform" action="" method="post">
+                    <div class="crow-message">
+                        <h1 class="color">Send us a message</h1>
+                        <div></div>
                     </div>
-                    <div>
-                    <a href="#" class="btn btn-full">Buy now</a>
+                    <div class="crow-in">
+                        <input
+                            type="text"
+                            id="name"
+                            name="name"
+                            placeholder="Your name"
+                        />
+                        <input
+                            type="text"
+                            id="email"
+                            name="email"
+                            placeholder="Your Email id"
+                        />
                     </div>
-                    </div>
-                </div>
-                  <div class="col span-1-of-3">
-                    <div class="plan-box">
-                        <div>
-                            <h3>Pro</h3>
-                            <p class="plan-per-month">30k<span>for 5 days</span></p>
-                            <p class="plan-per-meal">That's only 6k per day</p>
-                        </div>
-                        <div>
-                            <ul>
-                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Full Accomodation</li>
-                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Dinner and Lunch</li>
-                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Semi-Luxurious</li>
-                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Goodies</li>
-                            </ul>
-                        </div>
-                        <div>
-                        <a href="#" class="btn btn-border">Buy now</a>
-                        </div>
-                      </div>
-                </div>
-                <div class="col span-1-of-3">
-                    <div class="plan-box">
-                    <div>
-                        <h3>Basic</h3>
-                        <p class="plan-per-month">10k<span> for 3 Days</span></p>
-                        <p class="plan-per-meal">That's only 3.3k per day</p>
-                        </div>
-                        <div>
-                            <ul>
-                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Semi-Accomodation</li>
-                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Dinner only</li>
-                                <li><i class="ion-ios-checkmark-empty icon-small"></i>Basic</li>
-                                <li><i class="ion-ios-checkmark-empty icon-small"></i></li> 
-                            </ul>
-                        </div>
-                        <div>
-                        <a href="#" class="btn btn-border">Buy now</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="section-forms">
-            <div class="row">
-                <h2>We're happy to hear from you</h2>
-            </div>
-            <div class="row">
-                <form action="#" method="post" class="contact-form">
-                    <div class="row">
-                        <div class="col span-1-of-3">
-                            <lable for="name">Name</lable>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <input type="text" name="name" id="name" placeholder="Your Name" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-3">
-                            <lable for="email">Email</lable>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <input type="email" name="email" id="email" placeholder="Your email" required>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-3">
-                        <label>How did you find us?</label>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <select name="find-us">
-                                <option value="frnds">Friends</option>
-                                <option value="news">Newsletter</option>
-                                <option value="se">Search Engine</option>
-                                <option value="others">Others</option>
+                    <div class="crow">
+                        <div class="ccol-left">
+                            <select name="country" id="country">
+                                <option value="India">India</option>
+                                <option value="Russia">Russia</option>
+                                <option value="usa">USA</option>
+                                <option value="Japan">Japan</option>
+                                <option value="France">France</option>
+                                <option value="Brazil">Brazil</option>
                             </select>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col span-1-of-3">
-                            <label>Newsletter</label>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <input type="checkbox" name="newsletter"checked> Yes,Please
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col span-1-of-3">
-                            <lablel>Drop us a line</lablel>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <textarea name="feedback" placeholder="Your Feedback"></textarea>
+                    <div class="crow">
+                        <div class="ccol-left">
+                            <textarea
+                                type="text"
+                                id="remarks"
+                                name="remarks"
+                                placeholder="Your Remarks....."
+                                style="height: 150px"
+                            ></textarea>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col span-1-of-3">
-                            <label></label>
-                        </div>
-                        <div class="col span-2-of-3">
-                            <input type="submit" name="submit" value="Send it!">
-                        </div>
-                    </div>
+                    <input class="crow-s" type="submit" value="Submit" />
                 </form>
+                <div class="cbox">
+                    <div>
+                        <p class="cbox-message">
+                            Prefer some other way ?<br />Reach us by using the
+                            details given below
+                        </p>
+                        <div class="cbox-line"></div>
+                    </div>
+                    <div class="c_boxx">
+                        <a href="mailto:abc@gmail.com"
+                            ><i class="fa fa-envelope"></i>
+                            Mail: ghumojaipur@adventure.com
+                        </a>
+                    </div>
+                    <div class="c_boxx">
+                        <a href="tel:+91-12345-67890"
+                            ><i class="fa fa-phone"></i>
+                            Phone: (+91) 12345-67890
+                        </a>
+                    </div>
+                    <div class="c_boxx">
+                        <a href="#"
+                            ><i class="fa fa-map-marker"></i>
+                            Location: Jaipur,Rajasthan,India
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
-        <footer>
-            <div class="col span-1-of-2">
-                <ul class="footer-navs">
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Blog</a></li>
-                    <li><a href="#">ios App</a></li>
-                    <li><a href="#">Android App</a></li>
-                </ul>
+        <!-- contact  -->
+        <!-- up scroll -->
+        <i class="arrow"  onclick="topFunction()" id="upbtn"></i>
+        <!-- end -->
+        <!--footer-->
+        <section class="footer">
+            <span
+                >Created By Pranjal Khandelwal | &#169; 2023 All rights
+                reserved.</span
+            >
+            <div class="social">
+                <li>
+                    <a
+                        href="https://github.com/pranjalkhandelwal12"
+                        target="_blank"
+                        rel="noreferrer"
+                        ><i class="fa fa-github"></i
+                    ></a>
+                    <a
+                        href="https://www.linkedin.com/in/pranjal-khandelwal-324204222/"
+                        target="_blank"
+                        rel="noreferrer"
+                        ><i class="fa fa-linkedin-square"></i
+                    ></a>
+                </li>
             </div>
-            <div class="col span-1-of-2">
-                <ul class="social-navs">
-                    <li><a href="https://www.facebook.com/login/?privacy_mutation_token=eyJ0eXBlIjowLCJjcmVhdGlvbl90aW1lIjoxNjk4Mzk0MDY2LCJjYWxsc2l0ZV9pZCI6MjY5NTQ4NDUzMDcyMDk1MX0%3D"><i class="ion-social-facebook"></i></a></li>
-                    <li><a href="https://twitter.com/i/flow/login?input_flow_data=%7B%22requested_variant%22%3A%22eyJsYW5nIjoiZW4ifQ%3D%3D%22%7D"><i class="ion-social-twitter"></i></a></li>
-                    <li><a href="https://www.google.com/"><i class="ion-social-googleplus"></i></a></li>
-                    <li><a href="https://www.instagram.com/"><i class="ion-social-instagram"></i></a></li>
-                </ul>
-            </div>
-            <div class="row">
-                <p>copyright &copy;ghumojaipur-2023, All rights reserved!!</p>
-            </div>
-        </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
-        <script src="vendor/js/jquery.waypoints.min.js"></script>
-        <script src="resources/js/script.js"></script>
+        </section>
+        <!--footer-->
+
+        <script>
+            const menuBtn = document.querySelector(".menu-btn");
+            const navlinks = document.querySelector(".nav-links");
+
+            menuBtn.addEventListener("click", () => {
+                navlinks.classList.toggle("mobile-menu");
+            });
+        </script>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="js/script.js"></script>
     </body>
 </html>
-
